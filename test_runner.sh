@@ -53,6 +53,14 @@ while [ $# -gt 0 ]; do
             users=" -Jusers=$2"
             shift 2
             ;;
+        -h)
+            host=" -Jhost=$2"
+            shift 2
+            ;;
+        -p)
+            port=" -Jport=$2"
+            shift 2
+            ;;                        
         -l)
             loops=" -Jloops=$2"
             shift 2
