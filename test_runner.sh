@@ -177,6 +177,8 @@ $jmeterbin \
     $loops \
     $rampup \
     $throughput \
+    $host \
+    $port \
     > $runoutput || \
     throw_error $jmetererrormsg
 
