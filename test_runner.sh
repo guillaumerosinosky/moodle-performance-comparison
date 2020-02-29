@@ -73,6 +73,10 @@ while [ $# -gt 0 ]; do
             throughput=" -Jthroughput=$2"
             shift 2
             ;;
+        -p)
+            throughput_profile= "-J \"load_profile=$2\""
+            shift 2
+            ;;             
         *)
             # Wrong argument; True... we don't support "-[a-zA-Z] arguments.
             if [ "${1:0:1}" == "-" ]; then
