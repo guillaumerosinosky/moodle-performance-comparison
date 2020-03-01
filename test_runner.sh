@@ -74,13 +74,13 @@ while [ $# -gt 0 ]; do
             shift 2
             ;;
         -p)
-            throughput_profile= " -J \"load_profile=$2\""
+            throughput_profile=" -J \"load_profile=$2\""
             shift 2
             ;;
         -d)
-            duration = " -Jduration=$2"
+            duration=" -Jduration=$2"
             shift 2
-            ;;            
+            ;;
         *)
             # Wrong argument; True... we don't support "-[a-zA-Z] arguments.
             if [ "${1:0:1}" == "-" ]; then
