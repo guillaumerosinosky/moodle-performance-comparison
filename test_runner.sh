@@ -79,6 +79,8 @@ while [ $# -gt 0 ]; do
             ;;
         -d)
             duration = " -Jduration=$2"
+            shift 2
+            ;;            
         *)
             # Wrong argument; True... we don't support "-[a-zA-Z] arguments.
             if [ "${1:0:1}" == "-" ]; then
