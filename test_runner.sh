@@ -74,7 +74,7 @@ while [ $# -gt 0 ]; do
             shift 2
             ;;
         -p)
-            throughput_profile=" -J \"load_profile=$2\""
+            throughput_profile=" -Jload_profile=\"$2\""
             shift 2
             ;;
         -d)
