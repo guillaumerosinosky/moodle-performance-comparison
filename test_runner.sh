@@ -188,6 +188,7 @@ $jmeterbin \
     $host \
     $port \
     $duration \
+    $throughput_profile \
     > $runoutput || \
     throw_error $jmetererrormsg
 
