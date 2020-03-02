@@ -73,7 +73,7 @@ while [ $# -gt 0 ]; do
             throughput=" -Jthroughput=$2"
             shift 2
             ;;
-        -p)
+        -P)
             throughput_profile=" -Jload_profile=\"$2\""
             shift 2
             ;;
