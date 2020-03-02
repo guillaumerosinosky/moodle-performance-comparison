@@ -169,6 +169,28 @@ jmetererrormsg="Jmeter can not run, ensure that:
 * You provide correct arguments to the script"
 
 jmeterbin=${jmeter_path%/}/bin/jmeter
+echo "$jmeterbin \
+    -n \
+    -j "$logfile" \
+    -t "$testplanfile" \
+    -Jusersfile="$testusersfile" \
+    -Jgroup="$group" \
+    -Jdesc="$description" \
+    -Jsiteversion="$siteversion" \
+    -Jsitebranch="$sitebranch" \
+    -Jsitecommit="$sitecommit" \
+    $samplerinitstr \
+    $includelogsstr \
+    $users \
+    $loops \
+    $rampup \
+    $throughput \
+    $host \
+    $port \
+    $duration \
+    $throughput_profile \
+    > $runoutput || \
+    throw_error $jmetererrormsg"
 $jmeterbin \
     -n \
     -j "$logfile" \
